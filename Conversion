@@ -1,0 +1,116 @@
+import java.util.Scanner;
+
+public class Conversion {
+    public static void Convert(String[] args) {
+// Ask user for first unit of measurement
+        System.out.println("Unit to convert from");
+        Scanner in = new Scanner(System.in);
+        String first = in.nextLine();
+      
+// Ask user for second unit of measurement
+        System.out.println("Unit to convert to");
+        String second = in.nextLine();
+      
+// Ask for the value
+        System.out.println("Value to convert");
+        int number = in.nextInt();
+        in.close();
+      
+// if loop for inches to feet,cubits,steps,yards and miles
+      
+        if ("Inches".equals(first)) {
+            if (second == "Feet") {
+                System.out.println(number + " inches is equal to " + number / 12 + "feet");
+            } else if (second == "Cubits") {
+                System.out.println(number + " inches is equal to " + number / 18 + "cubits");
+            } else if (second == "Steps") {
+                System.out.println(number + " inches is equal to " + number / 0.03 + "steps");
+            } else if (second == " yards") {
+                System.out.println(number + " inches is equal to " + number / 36 + "yards");
+            } else if (second == "Miles") {
+                System.out.println(number + " inches is equal to " + number / 63360 + "miles");
+            }
+        }
+      
+        // if loop for feet to inches,cubits,steps,yards and miles
+      
+        if (first == "Feet") {
+            if (second == "Inches") {
+                System.out.println(number + " feet is equal to " + number * 12 + "feet");
+            } else if (second == "Cubits") {
+                System.out.println(number + " feet is equal to " + number / 1.5 + "cubits");
+            } else if (second == "Steps") {
+                System.out.println(number + " feet is equal to " + number / 2.5 + "steps");
+            } else if (second == "Yards") {
+                System.out.println(number + " feet is equal to " + number / 3 + "yards");
+            } else if (second == "Miles") {
+                System.out.println(number + " feet is equal to " + number / 5280 + "miles");
+            }
+        }
+      
+        // if loop for cubits to feet,inches,steps,yards and miles
+      
+        if (first == "Cubits") {
+            if (second == "Inches") {
+                System.out.println(number + " Cubits is equal to " + number * 18 + "Inches");
+            } else if (second == "Feet") {
+                System.out.println(number + " Cubits is equal to " + number * 1.5 + "Feet");
+            } else if (second == "Steps") {
+                System.out.println(number + " Cubits is equal to " + number * 0.6 + "Steps");
+            } else if (second == "Yards") {
+                System.out.println(number + " Cubits is equal to " + number / 2 + "Yards");
+            } else if (second == "Miles") {
+                System.out.println(number + " Cubits is equal to " + number / 3520 + "Miles");
+            }
+        }
+      
+        // if loop for steps to feet,cubits,inches,yards and miles
+      
+        if (first == "Steps") {
+            if (second == "Inches") {
+                System.out.println(number + " Steps is equal to " + number * 0.03 + "Inches");
+            } else if (second == "Cubits") {
+                System.out.println(number + " Steps is equal to " + number * 1.6667 + "Cubits");
+            } else if (second == "Feet") {
+                System.out.println(number + " Steps is equal to " + number * 2.5 + "Feet");
+            } else if (second == "Yards") {
+                System.out.println(number + " Steps is equal to " + number / 1.2 + "Yards");
+            } else if (second == "Miles") {
+                System.out.println(number + " Steps is equal to " + number / 2000 + "Miles");
+            }
+        }
+      
+        // if loop for yards to feet,cubits,steps,inches and miles
+      
+        if (first == "Yards") {
+            if (second == "Inches") {
+                System.out.println(number + " Yards is equal to " + number * 36 + "Inches");
+            } else if (second == "feet") {
+                System.out.println(number + " Yards is equal to " + number * 3 + "feet");
+            } else if (second == "Cubits") {
+                System.out.println(number + " Yards is equal to " + number * 2 + "Cubits");
+            } else if (second == "Steps") {
+                System.out.println(number + " Yards is equal to " + number * 1.2 + "Steps");
+            } else if (second == "Miles") {
+                System.out.println(number + " Yards is equal to " + number / 1760 + "Miles");
+            }
+        }
+      
+        // if loop for Miles to feet,cubits,steps,yards and inches
+      
+        if (first == "Miles") {
+            if (second == "Inches") {
+                System.out.println(number + " Miles is equal to " + number * 63360 + "Inches");
+            } else if (second == "Feet") {
+                System.out.println(number + " Miles is equal to " + number * 5280 + "Feet");
+            } else if (second == "Steps") {
+                System.out.println(number + " Miles is equal to " + number * 2000 + "Steps");
+            } else if (second == "Cubits") {
+                System.out.println(number + " Miles is equal to " + number * 3520 + "Cubits");
+            } else if (second == "Yards") {
+                System.out.println(number + " Miles is equal to " + number * 1760 + "Yards");
+            }
+        }
+
+    }
+}
